@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DivideByZeroExceptionHandling", "DivideByZeroExceptionHandling\DivideByZeroExceptionHandling.csproj", "{D6D39AB4-CD6A-4121-BEE0-D194FE90183B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6D39AB4-CD6A-4121-BEE0-D194FE90183B}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{D6D39AB4-CD6A-4121-BEE0-D194FE90183B}.Release|Any CPU.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,16 @@
+<?xml version = "1.0"?>
+<!-- Fig. 24.6: defaultnamespace.xml -->
+<!-- Using default namespaces -->
+
+<directory xmlns = "urn:deitel:textInfo"
+   xmlns:image = "urn:deitel:imageInfo">
+
+   <file filename = "book.xml">
+      <description>A book list</description>
+   </file>
+
+   <image:file filename = "funny.jpg">
+      <image:description>A funny picture</image:description>
+      <image:size width = "200" height = "100"/>
+   </image:file>
+</directory>

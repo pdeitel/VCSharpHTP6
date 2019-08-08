@@ -1,0 +1,89 @@
+﻿<!-- Fig. 33.5: MainWindow.xaml -->
+<!-- Applying brushes to various XAML elements. -->
+<Window x:Class="UsingBrushes.MainWindow"
+   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+   Title="UsingBrushes" Height="470" Width="720">
+   <Grid>
+      <Grid.RowDefinitions>
+         <RowDefinition />
+         <RowDefinition />
+         <RowDefinition />
+      </Grid.RowDefinitions>
+
+      <Grid.ColumnDefinitions>
+         <ColumnDefinition />
+         <ColumnDefinition />
+      </Grid.ColumnDefinitions>
+
+      <!-- TextBlock with a SolidColorBrush -->
+      <TextBlock TextWrapping="Wrap" Text="Color" FontSize="100" 
+         FontWeight="999">
+         <TextBlock.Foreground>
+            <SolidColorBrush Color="#FF5F2CAE" />
+         </TextBlock.Foreground>
+      </TextBlock>
+
+      <!-- Ellipse with a SolidColorBrush (just a Fill) -->
+      <Ellipse Grid.Column="1" Width="300" Height="100" Fill="#FF5F2CAE"/>
+
+      <!-- TextBlock with an ImageBrush -->
+      <TextBlock TextWrapping="Wrap" Text="Image" Grid.Row="1" 
+         FontSize="100" FontWeight="999">
+         <TextBlock.Foreground>
+            <!-- Flower image as an ImageBrush -->
+            <ImageBrush ImageSource="flowers.jpg"
+               Stretch="UniformToFill"/>
+         </TextBlock.Foreground>
+      </TextBlock>
+
+      <!-- Ellipse with an ImageBrush -->
+      <Ellipse Grid.Row="1" Grid.Column="1" Width="300" Height="100">
+         <Ellipse.Fill>
+            <ImageBrush ImageSource="flowers.jpg" 
+               Stretch="UniformToFill"/>
+         </Ellipse.Fill>
+      </Ellipse>
+
+      <!-- TextBlock with a MediaElement as a VisualBrush -->
+      <TextBlock TextWrapping="Wrap" Text="Video" Grid.Row="2" 
+         FontSize="100" FontWeight="999">
+         <TextBlock.Foreground>
+            <!-- VisualBrush with an embedded MediaElement-->
+            <VisualBrush Stretch="UniformToFill">
+               <VisualBrush.Visual>
+                  <MediaElement Source="media.mp4"/>
+               </VisualBrush.Visual>
+            </VisualBrush>
+         </TextBlock.Foreground>
+      </TextBlock>
+
+      <!-- Ellipse with a MediaElement as a VisualBrush -->
+      <Ellipse Grid.Row="2" Grid.Column="2" Width="300" Height="100">
+         <Ellipse.Fill>
+            <VisualBrush Stretch="UniformToFill">
+               <VisualBrush.Visual>
+                  <MediaElement Source="media.mp4" IsMuted="True"/>
+               </VisualBrush.Visual>
+            </VisualBrush>
+         </Ellipse.Fill>
+      </Ellipse>
+   </Grid>
+</Window>
+
+<!--
+**************************************************************************
+* (C) Copyright 1992-2014 by Deitel & Associates, Inc. and               *
+* Pearson Education, Inc. All Rights Reserved.                           *
+*                                                                        *
+* DISCLAIMER: The authors and publisher of this book have used their     *
+* best efforts in preparing the book. These efforts include the          *
+* development, research, and testing of the theories and programs        *
+* to determine their effectiveness. The authors and publisher make       *
+* no warranty of any kind, expressed or implied, with regard to these    *
+* programs or to the documentation contained in these books. The authors *
+* and publisher shall not be liable in any event for incidental or       *
+* consequential damages in connection with, or arising out of, the       *
+* furnishing, performance, or use of these programs.                     *
+************************************************************************** 
+-->

@@ -1,0 +1,25 @@
+<?xml version = "1.0"?>
+<!-- Fig. 24.9: book.xml -->
+<!-- Book list marked up as XML -->
+
+<deitel:books xmlns:deitel = "http://www.deitel.com/booklist">
+   <book>
+      <title>Visual Basic 2012 How to Program</title>
+   </book>
+
+   <book>
+      <title>Visual C# 2012 How to Program</title>
+   </book>
+
+   <book>
+      <title>Java How to Program</title>
+   </book>
+
+   <book>
+      <title>C++ How to Program</title>
+   </book>
+
+   <book>
+      <title>Internet and World Wide Web How to Program</title>
+   </book>
+</deitel:books>

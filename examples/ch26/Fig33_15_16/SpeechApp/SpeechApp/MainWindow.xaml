@@ -1,0 +1,76 @@
+﻿<!-- Fig. 33.15: MainWindow.xaml -->
+<!-- Text-To-Speech and Speech-To-Text -->
+<Window x:Class="SpeechApp.MainWindow"
+   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+   Title="Speech App" Height="580" Width="350">
+   <Grid>
+      <StackPanel Orientation="Vertical">
+         <TextBox x:Name="SpeechBox" Text="Enter text to speak here"/>
+         <Button x:Name="SpeechButton"
+            Content="Click to hear the text above." 
+            Click="SpeechButton_Click" />
+         <StackPanel Orientation="Horizontal" 
+            HorizontalAlignment="center">
+            <Image Source="images/CPE_100h.gif" Name="ErrorImage" 
+               MouseDown="Image_MouseDown" />
+            <Image Source="images/EPT_100h.gif" Name="PreventionImage" 
+               MouseDown="Image_MouseDown" />
+            <Image Source="images/GPP_100h.gif" 
+               Name="GoodPracticesImage" MouseDown="Image_MouseDown" />
+         </StackPanel>
+         <StackPanel Orientation="Horizontal" 
+            HorizontalAlignment="Center">
+            <TextBlock Width="110" Text="Common Programming Errors" 
+               TextWrapping="wrap" TextAlignment="Center"/>
+            <TextBlock Width="110" Text="Error-Prevention Tips" 
+               TextWrapping="wrap" TextAlignment="Center" />
+            <TextBlock Width="110" Text="Good Programming Practices"
+               TextWrapping="wrap" TextAlignment="Center"/>
+         </StackPanel>
+         <StackPanel Orientation="Horizontal"
+            HorizontalAlignment="center">
+            <Image Source="images/GUI_100h.gif" 
+               Name="LookAndFeelImage" MouseDown="Image_MouseDown" />
+            <Image Source="images/PERF_100h.gif" 
+               Name="PerformanceImage" MouseDown="Image_MouseDown" />
+            <Image Source="images/PORT_100h.gif" 
+               Name="PortabilityImage" MouseDown="Image_MouseDown" />
+         </StackPanel>
+         <StackPanel Orientation="Horizontal" 
+            HorizontalAlignment="Center">
+            <TextBlock Width="110" Text="Look-and-Feel Observations"
+               TextWrapping="wrap" TextAlignment="Center"/>
+            <TextBlock Width="110" Text="Performance Tips"
+               TextWrapping="wrap" TextAlignment="Center" />
+            <TextBlock Width="110" Text="Portability Tips"
+               TextWrapping="wrap" TextAlignment="Center"/>
+         </StackPanel>
+         <Image Source="images/SEO_100h.gif" Height="100" Width="110"
+            Name="ObservationsImage" MouseDown="Image_MouseDown" />
+         <TextBlock Width="110" Text="Software Engineering
+            Observations" TextWrapping="wrap" TextAlignment="Center" />
+         <TextBlock x:Name="InfoBlock" Margin="5" 
+            Text="Click an icon or say its name to view details."
+            TextWrapping="Wrap"/>
+      </StackPanel>
+   </Grid>
+</Window>
+
+
+<!--
+**************************************************************************
+* (C) Copyright 1992-2014 by Deitel & Associates, Inc. and               *
+* Pearson Education, Inc. All Rights Reserved.                           *
+*                                                                        *
+* DISCLAIMER: The authors and publisher of this book have used their     *
+* best efforts in preparing the book. These efforts include the          *
+* development, research, and testing of the theories and programs        *
+* to determine their effectiveness. The authors and publisher make       *
+* no warranty of any kind, expressed or implied, with regard to these    *
+* programs or to the documentation contained in these books. The authors *
+* and publisher shall not be liable in any event for incidental or       *
+* consequential damages in connection with, or arising out of, the       *
+* furnishing, performance, or use of these programs.                     *
+**************************************************************************  
+-->

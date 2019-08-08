@@ -1,0 +1,13 @@
+<?xml version = "1.0"?>
+<!-- Fig. 24.13: laptop.xml              -->
+<!-- Laptop components marked up as XML -->
+
+<computer:laptop xmlns:computer = "http://www.deitel.com/computer" 
+   manufacturer = "IBM">
+   
+   <processor model = "Centrino">Intel</processor>
+   <monitor>17</monitor>
+   <CPUSpeed>2.4</CPUSpeed>
+   <RAM>256</RAM> 
+</computer:laptop>
+

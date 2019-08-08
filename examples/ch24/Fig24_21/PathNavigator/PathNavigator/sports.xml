@@ -1,0 +1,32 @@
+<?xml version = "1.0"?>
+<?xml-stylesheet type = "text/xsl" href = "sports.xsl"?>
+
+<!-- Fig. 24.8: sports.xml -->
+<!-- Sports Database -->
+
+<sports>
+   <game id = "783">
+      <name>Cricket</name>
+
+      <paragraph>
+         More popular among commonwealth nations.
+      </paragraph>
+   </game>
+
+   <game id = "239">
+      <name>Baseball</name>
+
+      <paragraph>
+         More popular in America.
+      </paragraph>
+   </game>
+
+   <game id = "418">
+      <name>Soccer (Futbol)</name>
+
+      <paragraph>
+         Most popular sport in the world.
+      </paragraph>
+   </game>
+</sports> 
+

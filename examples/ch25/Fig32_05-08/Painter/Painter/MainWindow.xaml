@@ -1,0 +1,85 @@
+﻿<!-- Fig. 32.5: MainWindow.xaml -->
+<!-- XAML of a painter app. -->
+<Window x:Class="Painter.MainWindow"
+   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+   Title="Painter" Height="340" Width="350" Background="Beige">
+
+   <!-- creates a Grid -->
+   <Grid>
+      <Grid.ColumnDefinitions>
+         <ColumnDefinition Width="Auto" /> <!-- defines a column -->
+         <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+
+      <!-- creates a Canvas -->
+      <Canvas x:Name="paintCanvas" Grid.Column="1" Background="White" 
+         Margin="0" MouseMove="paintCanvas_MouseMove" 
+         MouseLeftButtonDown="paintCanvas_MouseLeftButtonDown" 
+         MouseLeftButtonUp="paintCanvas_MouseLeftButtonUp" 
+         MouseRightButtonDown="paintCanvas_MouseRightButtonDown" 
+         MouseRightButtonUp="paintCanvas_MouseRightButtonUp" />
+
+      <!-- creates a StackPanel-->
+      <StackPanel Margin="3">
+         <!-- creates a GroupBox for color options -->
+         <GroupBox Header="Color" Margin="3">
+            <StackPanel Margin="3" HorizontalAlignment="Left" 
+               VerticalAlignment="Top">
+
+               <!-- creates RadioButtons for selecting color -->
+               <RadioButton x:Name="redRadioButton" Content="Red" 
+                  Margin="3" Checked="redRadioButton_Checked" />
+               <RadioButton x:Name="blueRadioButton" Content="Blue" 
+                  Margin="3" Checked="blueRadioButton_Checked" />
+               <RadioButton x:Name="greenRadioButton" Content="Green" 
+                  Margin="3" Checked="greenRadioButton_Checked" />
+               <RadioButton x:Name="blackRadioButton" Content="Black" 
+                  IsChecked="True" Margin="3" 
+                  Checked="blackRadioButton_Checked" />
+            </StackPanel>
+         </GroupBox>
+
+         <!-- creates GroupBox for size options -->
+         <GroupBox Header="Size" Margin="3">
+            <StackPanel Margin="3" HorizontalAlignment="Left" 
+               VerticalAlignment="Top">
+               <RadioButton x:Name="smallRadioButton" Content="Small" 
+                  Margin="3" Checked="smallRadioButton_Checked" />
+               <RadioButton x:Name="mediumRadioButton" IsChecked="True"
+                  Checked="mediumRadioButton_Checked" Content="Medium" 
+                  Margin="3" />
+               <RadioButton x:Name="largeRadioButton" Content="Large" 
+                  Margin="3" Checked="largeRadioButton_Checked" />
+            </StackPanel>
+         </GroupBox>
+
+         <!-- creates a Button-->
+         <Button x:Name="undoButton" Content="Undo" Width="75" 
+            Margin="3,10,3,3" Click="undoButton_Click"/>
+
+         <!-- creates a Button-->
+         <Button x:Name="clearButton" Content="Clear" Width="75" 
+            Margin="3,10,3,3" Click="clearButton_Click"/>
+      </StackPanel>
+   </Grid>
+</Window>
+
+
+<!--
+**************************************************************************
+* (C) Copyright 1992-2014 by Deitel & Associates, Inc. and               *
+* Pearson Education, Inc. All Rights Reserved.                           *
+*                                                                        *
+* DISCLAIMER: The authors and publisher of this book have used their     *
+* best efforts in preparing the book. These efforts include the          *
+* development, research, and testing of the theories and programs        *
+* to determine their effectiveness. The authors and publisher make       *
+* no warranty of any kind, expressed or implied, with regard to these    *
+* programs or to the documentation contained in these books. The authors *
+* and publisher shall not be liable in any event for incidental or       *
+* consequential damages in connection with, or arising out of, the       *
+* furnishing, performance, or use of these programs.                     *
+**************************************************************************  
+-->   
+   

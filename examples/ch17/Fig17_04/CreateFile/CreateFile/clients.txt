@@ -1,0 +1,5 @@
+100,Nancy,Brown,-25.54
+200,Stacey,Dunn,314.33
+399,Doug,Barker,0.00
+400,Dave,Smith,258.34
+500,Sam,Stone,34.98

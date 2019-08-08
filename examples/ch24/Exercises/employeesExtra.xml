@@ -1,0 +1,7 @@
+﻿<?xml version="1.0"?>
+<!-- Exercise 24.11: employeesExtra.xml -->
+<!-- Additional new-format input for the XMLCombine application. -->
+<employeelist xmlns="http://www.deitel.com/employeesnew">
+   <employee name="Ralph Yellow" salary="1300"/>
+   <employee name="Rick Black" salary="1500"/>
+</employeelist>

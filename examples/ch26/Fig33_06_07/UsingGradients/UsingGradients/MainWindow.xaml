@@ -1,0 +1,90 @@
+﻿<!-- Fig. 33.6: MainWindow.xaml -->
+<!-- Defining gradients in XAML. -->
+<Window x:Class="UsingGradients.MainWindow"
+   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+   Title="UsingGradients" Height="200" Width="450">
+   <Grid>
+      <Grid.RowDefinitions>
+         <RowDefinition />
+         <RowDefinition Height="Auto" />
+         <RowDefinition Height="Auto" />
+         <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+
+      <!-- TextBlock in the background to show transparency -->
+      <TextBlock TextWrapping="Wrap" Text="Transparency test" 
+         FontSize="30" HorizontalAlignment="Center" 
+         VerticalAlignment="Center"/>
+      
+      <!-- sample rectangle with linear gradient fill -->
+      <Rectangle> 
+         <Rectangle.Fill>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+               <!-- gradient stop can define a color at any offset -->
+               <GradientStop x:Name="startGradient" Offset="0.0" 
+                  Color="White" />
+               <GradientStop x:Name="stopGradient" Offset="1.0" 
+                  Color="Black" />
+            </LinearGradientBrush>
+         </Rectangle.Fill>
+      </Rectangle>
+
+      <!-- shows which TextBox corresponds with which ARGB value-->
+      <StackPanel Grid.Row="1" Orientation="Horizontal">
+         <TextBlock TextWrapping="Wrap" Text="Alpha:" 
+            Width="75" Margin="5"/>
+         <TextBlock TextWrapping="Wrap" Text="Red:" 
+            Width="75" Margin="5"/>
+         <TextBlock TextWrapping="Wrap" Text="Green:" 
+            Width="75" Margin="5"/>
+         <TextBlock TextWrapping="Wrap" Text="Blue:" 
+            Width="75" Margin="5"/>
+      </StackPanel>
+
+      <!-- GUI to select the color of the first GradientStop -->
+      <StackPanel Grid.Row="2" Orientation="Horizontal">
+         <TextBox Name="fromAlpha" TextWrapping="Wrap" Text="255" 
+            Width="75" Margin="5"/>
+         <TextBox Name="fromRed" TextWrapping="Wrap" Text="255" 
+            Width="75" Margin="5"/>
+         <TextBox Name="fromGreen" TextWrapping="Wrap" Text="255" 
+            Width="75" Margin="5"/>
+         <TextBox Name="fromBlue" TextWrapping="Wrap" Text="255" 
+            Width="75" Margin="5"/>
+         <Button Name="fromButton" Content="Start Color" Width="75" 
+            Margin="5" Click="fromButton_Click"/>
+      </StackPanel>
+
+      <!-- GUI to select the color of second GradientStop -->
+      <StackPanel Grid.Row="3" Orientation="Horizontal">
+         <TextBox Name="toAlpha" TextWrapping="Wrap" Text="255" 
+            Width="75" Margin="5"/>
+         <TextBox Name="toRed" TextWrapping="Wrap" Text="0" 
+            Width="75" Margin="5"/>
+         <TextBox Name="toGreen" TextWrapping="Wrap" Text="0" 
+            Width="75" Margin="5"/>
+         <TextBox Name="toBlue" TextWrapping="Wrap" Text="0" 
+            Width="75" Margin="5"/>
+         <Button Name="toButton" Content="End Color" Width="75" 
+            Margin="5" Click="toButton_Click"/>
+      </StackPanel>
+   </Grid>
+</Window>
+
+<!--
+**************************************************************************
+* (C) Copyright 1992-2014 by Deitel & Associates, Inc. and               *
+* Pearson Education, Inc. All Rights Reserved.                           *
+*                                                                        *
+* DISCLAIMER: The authors and publisher of this book have used their     *
+* best efforts in preparing the book. These efforts include the          *
+* development, research, and testing of the theories and programs        *
+* to determine their effectiveness. The authors and publisher make       *
+* no warranty of any kind, expressed or implied, with regard to these    *
+* programs or to the documentation contained in these books. The authors *
+* and publisher shall not be liable in any event for incidental or       *
+* consequential damages in connection with, or arising out of, the       *
+* furnishing, performance, or use of these programs.                     *
+**************************************************************************
+-->

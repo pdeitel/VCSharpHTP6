@@ -1,0 +1,12 @@
+<?xml version = "1.0"?>
+<!-- Fig. 24.1: player.xml -->
+<!-- Baseball player structured with XML -->
+
+<player>
+   <firstName>John</firstName>
+
+   <lastName>Doe</lastName>
+
+   <battingAverage>0.375</battingAverage>
+</player>
+

@@ -1,0 +1,49 @@
+﻿<!-- Fig. 33.3: MainWindow.xaml -->
+<!-- Defining Polylines and Polygons in XAML. -->
+<Window x:Class="DrawPolygons.MainWindow"
+   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+   Title="DrawPolygons" Height="400" Width="450" Name="mainWindow">
+   <Grid>
+      <Grid.ColumnDefinitions>
+         <ColumnDefinition />
+         <ColumnDefinition Width="Auto" />
+      </Grid.ColumnDefinitions>
+
+      <!-- Canvas contains two polygons and a polyline -->
+      <!-- only the shape selected by the radio button is visible -->
+      <Canvas Name="drawCanvas" Grid.Column="0" Background="White" 
+         MouseDown="drawCanvas_MouseDown">
+         <Polyline Name="polyLine" Stroke="Black" 
+            Visibility="Collapsed" />
+         <Polygon Name="polygon" Stroke="Black" Visibility="Collapsed" />
+         <Polygon Name="filledPolygon" Fill="DarkBlue"
+            Visibility="Collapsed" />
+      </Canvas>
+
+      <!-- StackPanel containing the RadioButton options -->
+      <StackPanel Grid.Column="1" Orientation="Vertical" 
+         Background="WhiteSmoke">
+         <GroupBox Header="Select Type" Margin="10">
+            <StackPanel>
+               <!-- Polyline option -->
+               <RadioButton Name="lineRadio" Content="Polyline" 
+                  Margin="5" Checked="lineRadio_Checked"/>
+
+               <!-- unfilled Polygon option -->
+               <RadioButton Name="polygonRadio" Content="Polygon"
+                  Margin="5" Checked="polygonRadio_Checked"/>
+
+               <!-- filled Polygon option -->
+               <RadioButton Name="filledPolygonRadio" 
+                  Content="Filled Polygon" Margin="5" 
+                  Checked="filledPolygonRadio_Checked"/>
+            </StackPanel>
+         </GroupBox>
+
+         <!-- Button clears the shape from the canvas -->
+         <Button Name="clearButton" Content="Clear" 
+            Click="clearButton_Click" Margin="5"/>
+      </StackPanel>
+   </Grid>
+</Window>

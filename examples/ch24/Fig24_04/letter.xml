@@ -1,0 +1,45 @@
+<?xml version = "1.0"?>
+<!-- Fig. 24.4: letter.xml -->
+<!-- Business letter marked up as XML -->
+
+<!DOCTYPE letter SYSTEM "letter.dtd">
+
+<letter>
+   <contact type = "sender">
+      <name>Jane Doe</name>
+      <address1>Box 12345</address1>
+      <address2>15 Any Ave.</address2>
+      <city>Othertown</city>
+      <state>Otherstate</state>
+      <zip>67890</zip>
+      <phone>555-4321</phone>
+      <flag gender = "F" />
+   </contact>
+
+   <contact type = "receiver">
+      <name>John Doe</name>
+      <address1>123 Main St.</address1>
+      <address2></address2>
+      <city>Anytown</city>
+      <state>Anystate</state>
+      <zip>12345</zip>
+      <phone>555-1234</phone>
+      <flag gender = "M" />
+   </contact>
+
+   <salutation>Dear Sir:</salutation>
+
+   <paragraph>It is our privilege to inform you about our new database
+      managed with XML. This new system allows you to reduce the 
+      load on your inventory list server by having the client machine
+      perform the work of sorting and filtering the data.
+   </paragraph>
+
+   <paragraph>Please visit our Web site for availability 
+      and pricing.
+   </paragraph>
+
+   <closing>Sincerely,</closing>
+   <signature>Ms. Jane Doe</signature>
+</letter>
+

@@ -1,0 +1,96 @@
+﻿<!-- Fig. 32.15: MainWindow.xaml -->
+<!-- Color chooser app showing the use of styles (XAML). -->
+<Window x:Class="ColorChooser.MainWindow"
+   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+   Title="Color Chooser" Height="150" Width="500">
+
+   <Window.Resources> <!-- define Window's resources -->
+      <Style x:Key="SliderStyle"> <!-- define style for Sliders -->
+
+         <!-- set properties for Sliders -->
+         <Setter Property="Slider.Width" Value="256" />
+         <Setter Property="Slider.Minimum" Value="0" />
+         <Setter Property="Slider.Maximum" Value="255" />
+         <Setter Property="Slider.IsSnapToTickEnabled" Value="True" />
+         <Setter Property="Slider.VerticalAlignment" Value="Center" />
+         <Setter Property="Slider.HorizontalAlignment" Value="Center" />
+         <Setter Property="Slider.Value" Value="0" />
+         <Setter Property="Slider.AutoToolTipPlacement"                 
+            Value="TopLeft" />
+
+         <!-- set event handler for ValueChanged event -->
+         <EventSetter Event="Slider.ValueChanged"                       
+            Handler="slider_ValueChanged" />
+      </Style>
+   </Window.Resources>
+
+   <Grid Margin="5"> <!-- define GUI -->
+      <Grid.RowDefinitions>
+         <RowDefinition />
+         <RowDefinition />
+         <RowDefinition />
+         <RowDefinition />
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+         <ColumnDefinition Width="Auto" />
+         <ColumnDefinition Width="Auto" />
+         <ColumnDefinition Width="50" />
+         <ColumnDefinition />
+      </Grid.ColumnDefinitions>
+
+      <!-- define Labels for Sliders -->
+      <Label Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right"
+         VerticalAlignment="Center" Content="Red:"/>
+      <Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right"
+         VerticalAlignment="Center" Content="Green:"/>
+      <Label Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right"
+         VerticalAlignment="Center" Content="Blue:"/>
+      <Label Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right"
+         VerticalAlignment="Center" Content="Alpha:"/>
+
+      <!-- define Label that displays the color -->
+      <Label x:Name="colorLabel" Grid.RowSpan="4" Grid.Column="3" 
+         Margin="10" />
+
+      <!-- define Sliders and apply style to them -->
+      <Slider x:Name="redSlider" Grid.Row="0" Grid.Column="1" 
+         Style="{StaticResource SliderStyle}"         
+         Value="{Binding Text, ElementName=redBox}" />
+      <Slider x:Name="greenSlider" Grid.Row="1" Grid.Column="1"
+         Style="{StaticResource SliderStyle}"          
+         Value="{Binding Text, ElementName=greenBox}"/>
+      <Slider x:Name="blueSlider" Grid.Row="2" Grid.Column="1"
+         Style="{StaticResource SliderStyle}"         
+         Value="{Binding Text, ElementName=blueBox}"/>
+      <Slider x:Name="alphaSlider" Grid.Row="3" Grid.Column="1"
+         Style="{StaticResource SliderStyle}"           
+         Value="{Binding Text, ElementName=alphaBox}" />
+
+      <TextBox x:Name="redBox" Grid.Row="0" Grid.Column="2"
+         Text="{Binding Value, ElementName=redSlider}"/>
+      <TextBox x:Name="greenBox" Grid.Row="1" Grid.Column="2"
+         Text="{Binding Value, ElementName=greenSlider}"/>
+      <TextBox x:Name="blueBox" Grid.Row="2" Grid.Column="2"
+         Text="{Binding Value, ElementName=blueSlider}"/>
+      <TextBox x:Name="alphaBox" Grid.Row="3" Grid.Column="2"
+         Text="{Binding Value, ElementName=alphaSlider}"/>
+   </Grid>
+</Window>
+
+<!--
+**************************************************************************
+* (C) Copyright 1992-2014 by Deitel & Associates, Inc. and               *
+* Pearson Education, Inc. All Rights Reserved.                           *
+*                                                                        *
+* DISCLAIMER: The authors and publisher of this book have used their     *
+* best efforts in preparing the book. These efforts include the          *
+* development, research, and testing of the theories and programs        *
+* to determine their effectiveness. The authors and publisher make       *
+* no warranty of any kind, expressed or implied, with regard to these    *
+* programs or to the documentation contained in these books. The authors *
+* and publisher shall not be liable in any event for incidental or       *
+* consequential damages in connection with, or arising out of, the       *
+* furnishing, performance, or use of these programs.                     *
+************************************************************************** 
+-->

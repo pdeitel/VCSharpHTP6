@@ -1,0 +1,9 @@
+﻿<?xml version="1.0"?>
+<!-- Exercise 24.12: nutrition2.xml -->
+<!-- Additional nutrition data. -->
+<nutrition xmlns="http://www.deitel.com/nutrition">
+   <vitaminA>2</vitaminA>
+   <vitaminC>10</vitaminC>
+   <vitaminE>5</vitaminE>
+   <zinc>8</zinc>
+</nutrition>
