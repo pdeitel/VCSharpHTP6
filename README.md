@@ -1,7 +1,6 @@
 # Visual C# How to Program, 6/e Code Examples
 
 Source code for <a href="https://amzn.to/31B0WPN" target="_blank">Visual C# How to Program, 6/e</a>
-![Cover image for Visual C# How to Program, 6/e](http://deitel.com/bookresources/vcsharphtp6/vcsharphtp6.png)
 
 These files are for your personal use and may not be redistributed or reposted.
 
