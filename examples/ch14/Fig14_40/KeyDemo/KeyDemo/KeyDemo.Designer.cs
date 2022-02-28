@@ -60,9 +60,9 @@
          this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
          this.Name = "KeyDemo";
          this.Text = "Key Demo";
-         this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDemoForm_KeyDown);
-         this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyDemoForm_KeyPress);
-         this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyDemoForm_KeyUp);
+         this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDemo_KeyDown);
+         this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyDemo_KeyPress);
+         this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyDemo_KeyUp);
          this.ResumeLayout(false);
 
       }
