@@ -7,8 +7,8 @@
     <ProjectGuid>{11FBD7C8-35D5-405D-848B-39076ECF4994}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Account3</RootNamespace>
-    <AssemblyName>Account3</AssemblyName>
+    <RootNamespace>Account4</RootNamespace>
+    <AssemblyName>Account4</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
